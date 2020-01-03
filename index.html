@@ -139,11 +139,13 @@
 					<section>
 						<h5>Pseudocode</h5>
 						<pre><code data-trim>
-							# for every point on the heightmap:
-								# for every neighboring point:
-									# compute the difference in heights between the original point and the neighbor
-									# update the maximum change in height
-									# move sediment from the original point to the point with the maximal height difference 
+							#for every point on the heightmap:
+								#for every neighboring point:
+									#calculate the change in height
+									#update the maximum delta
+									#if the maximum delta is higher than the talus angle:
+										#add sediment to the lowest point
+										#remove sediment from the original
 						</code></pre>
 					</section>
 					<section>
