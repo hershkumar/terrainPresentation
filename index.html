@@ -137,28 +137,27 @@
 						<p>If a uniform pile of sediment is steeper than the talus angle, sediment from the top will be redistributed to create a cone of inclination equivalent to the talus angle.</p>
 					</section>
 					<section>
-						<h5>Pseudocode</h5>
-						<pre><code data-trim data-line-numbers="1-19">
-					    mapsize = len(heightmap) 
-					    TALUS = 4/mapsize
-					    copymap = [row[:] for row in heightmap]
-					    for it in range(iterations):
-					        print(it + 1,"/",iterations)
-					        for y in range(mapsize):
-					            for x in range(mapsize):
-					                h = heightmap[x][y]
-					                neighbors = get_neighbors(heightmap, x, y)
-					                neighbor_deltas = []
-					                for point in neighbors:
-					                    neighbor_deltas.append(h - heightmap[point[0]][point[1]])
-					                dmax = max(neighbor_deltas)
-					                index_of_increase = neighbor_deltas.index(dmax)
-					                if (dmax <= TALUS):
-					                    continue
-					                dmax *= .25
-					                heightmap[x][y] -= dmax
-					                heightmap[neighbors[index_of_increase][0]][neighbors[index_of_increase][1]] += dmax
-						</code></pre>
+						<h5>Python Implementation</h5>
+						<pre><code data-noescape data-trim data-line-numbers="1-19">
+					    <span class="fragment">mapsize = len(heightmap)</span>
+					    <span class="fragment">TALUS = 4/mapsize
+					    <span class="fragment">copymap = [row[:] for row in heightmap]</span>
+					    <span class="fragment">for it in range(iterations):</span>
+					        <span class="fragment">print(it + 1,"/",iterations)
+					        <span class="fragment">for y in range(mapsize):
+					            <span class="fragment">for x in range(mapsize):
+					                <span class="fragment">h = heightmap[x][y]</span>
+					                <span class="fragment">neighbors = get_neighbors(heightmap, x, y)</span>
+					                <span class="fragment">neighbor_deltas = []</span>
+					                <span class="fragment">for point in neighbors:</span>
+					                    <span class="fragment">neighbor_deltas.append(h - heightmap[point[0]][point[1]])</span>
+					                <span class="fragment">dmax = max(neighbor_deltas)</span>
+					                <span class="fragment">index_of_increase = neighbor_deltas.index(dmax)</span>
+					                <span class="fragment">if (dmax <= TALUS):</span>
+					                    <span class="fragment">continue</span>
+					                <span class="fragment">dmax *= .25</span>
+					                <span class="fragment">heightmap[x][y] -= dmax</span>
+					                <span class="fragment">heightmap[neighbors[index_of_increase][0]][neighbors[index_of_increase][1]] += dmax</span></code></pre>
 					</section>
 					<section>
 						<h5>Effect</h5>
