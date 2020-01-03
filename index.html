@@ -138,14 +138,26 @@
 					</section>
 					<section>
 						<h5>Pseudocode</h5>
-						<pre><code data-trim>
-							#for every point on the heightmap:
-								#for every neighboring point:
-									#calculate the change in height
-									#update the maximum delta
-									#if max delta > talus angle:
-										#add sediment to the lowest point
-										#remove sediment from the original
+						<pre><code data-trim data-line-numbers="1-19">
+					    mapsize = len(heightmap) 
+					    TALUS = 4/mapsize
+					    copymap = [row[:] for row in heightmap]
+					    for it in range(iterations):
+					        print(it + 1,"/",iterations)
+					        for y in range(mapsize):
+					            for x in range(mapsize):
+					                h = heightmap[x][y]
+					                neighbors = get_neighbors(heightmap, x, y)
+					                neighbor_deltas = []
+					                for point in neighbors:
+					                    neighbor_deltas.append(h - heightmap[point[0]][point[1]])
+					                dmax = max(neighbor_deltas)
+					                index_of_increase = neighbor_deltas.index(dmax)
+					                if (dmax <= TALUS):
+					                    continue
+					                dmax *= .25
+					                heightmap[x][y] -= dmax
+					                heightmap[neighbors[index_of_increase][0]][neighbors[index_of_increase][1]] += dmax
 						</code></pre>
 					</section>
 					<section>
