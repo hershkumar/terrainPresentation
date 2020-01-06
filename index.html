@@ -58,8 +58,31 @@
 					</blockquote>
 					</p>
 				</section>
+				<section>
+					<section>
+						<h5>Noise-based Terrain Generation</h5>
+						<p>
+							Terrain that is based on heightmaps generated through 2 dimensional noise functions. Common functions include Perlin and Worley noise.
+						</p>
+					</section>
+					<section>
+						<h5>Perlin Noise</h5>
+						<p>
+						Effective Perlin Noise can be generated via layering different "octaves" of noise with different frequencies.</p>
+						<img src="imgs/perlin.png" class="fragment">
+						
+					</section>
+					<section>
+						<h5>Worley Noise</h5>
+						<p>Worley noise is based on a kth-closest neighbor algorithm, and is useful in cell noise simulation.</p>
+						<img src="imgs/worley.png" class="fragment">
 
-
+					</section>					
+				</section>
+				<section>
+					<h3>Achieving Realistic Terrain</h3>
+					<p>Terrain generated via noise does not look realistic, so certain methods have been developed to modify the generated terrain. Most methods are based off of natural processes that occur over long timescales.</p>
+				</section>
 				<section>
 					<h3>Hydraulic Erosion</h3>
 					<p>
@@ -179,8 +202,16 @@
 					</div>
 				</section>
 				<section>
+					<h5>Combined Erosion</h5>
+					<p>
+						We can simulate a mix of these techniques by running both erosion algorithms on the same heightmap.
+					</p>
+				</section>
+				<section>
 					<h5>Sources</h5>
-					<li></li>
+					<li>https://web.mit.edu/cesium/Public/terrain.pdf</li>
+					<li>http://old.cescg.org/CESCG-2011/papers/TUBudapest-Jako-Balazs.pdf</li>
+					
 				</section>
 
 			</div>
