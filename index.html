@@ -68,7 +68,7 @@
 					<section>
 						<h5>Noise Functions</h5>
 						<p>
-							Noise algorithms that are used for terrain gneeration are usually gradient noise algorithms, which produce a lattice of random gradients and uses dot product interpolation to obtain values between the lattice points.
+							Noise algorithms that are used for terrain generation are usually gradient noise algorithms, which produce a lattice of random gradients and uses dot product interpolation to obtain values between the lattice points.
 						</p>
 					</section>
 					<section>
@@ -131,14 +131,14 @@
 
 				</section>
 
-				<section data-background-iframe="https://hershkumar.github.io/terrain/prehydraulic1.html" data-background-interactive>
+				<section data-background-iframe="https://hershkumar.github.io/terrain/prehydraulic1.html"  data-transition="fade">
 					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
 						<h5>Before Hydraulic Erosion</h5>
 						<p>This is procedurally generated terrain that has been generated via Perlin Noise.</p>
 					</div>
 				</section>
 				
-				<section data-background-iframe="https://hershkumar.github.io/terrain/hydraulic1.html" data-background-interactive>
+				<section data-background-iframe="https://hershkumar.github.io/terrain/hydraulic1.html"  data-transition="fade">
 					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
 						<h5>After Hydraulic Erosion</h5>
 						<p>This is procedurally generated terrain that has been hydraulically eroded for ______ iterations.</p>
@@ -203,14 +203,14 @@
 					</section>	
 				</section>
 				
-				<section data-background-iframe="https://hershkumar.github.io/terrain/prethermal1.html" data-background-interactive>
+				<section data-background-iframe="https://hershkumar.github.io/terrain/prethermal1.html"  data-transition="fade">
 					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
 						<h5>Before Thermal Erosion</h5>
 						<p>This is procedurally generated terrain that has been generated via Perlin Noise.</p>
 					</div>
 				</section>
 				
-				<section data-background-iframe="https://hershkumar.github.io/terrain/thermal1.html" data-background-interactive>
+				<section data-background-iframe="https://hershkumar.github.io/terrain/thermal1.html"  data-transition="fade">
 					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
 						<h5>After Thermal Erosion</h5>
 						<p>This is procedurally generated terrain that has been thermally eroded for 50 iterations.</p>
@@ -233,31 +233,10 @@
 				</section>
 
 				<section>
-					<h5>Combined Erosion</h5>
-					<p>
-						We can simulate a mix of these techniques by running both erosion algorithms on the same heightmap to achieve terrain that has been eroded by both water and sediment.
-					</p>
-				</section>
-				<section data-background-iframe="https://hershkumar.github.io/terrain/combined.html" data-background-interactive>
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
-						<h5>Before Combined Erosion</h5>
-						<p>This is procedurally generated terrain that has been generated via Worley Noise.</p>
-					</div>
-				</section>
-				<section data-background-iframe="https://hershkumar.github.io/terrain/combined.html" data-background-interactive>
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
-						<h5>After Combined Erosion</h5>
-						<p>This is procedurally generated terrain that has been eroded via both hydraulic and thermal erosion.</p>
-					</div>
-				</section>
-
-				
-
-				<section>
 					<h5>Sources</h5>
 					<li>Olsen, J. (2004). Realtime procedural terrain generation.</li>
 					<li>Jákó, B., & Tóth, B. (2011, November). Fast Hydraulic and Thermal Erosion on GPU. In Eurographics (Short Papers) (pp. 57-60).</li>
-					<li><a href="https://www.youtube.com/watch?v=eaXk97ujbPQ">Sebastian Lague</a></li>
+					<li>Lague, Sebastian, director. Coding Adventure: Hydraulic Erosion. YouTube, YouTube, 17 Feb. 2019,<a href="www.youtube.com/watch?v=eaXk97ujbPQ"> www.youtube.com/watch?v=eaXk97ujbPQ</a>.</li>
 					
 				</section>
 
@@ -276,7 +255,7 @@
 				center: true,
 				hash: true,
 
-				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
