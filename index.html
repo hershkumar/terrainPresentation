@@ -100,32 +100,32 @@
 					<section>
 						<h5>Hydraulic Erosion Algorithm</h5>
 						<p>
-							This algorithm allows for the simulation of rainfall based erosion on a procedurally generated terrain map.
+							This algorithm allows for the simulation of water based erosion on a procedurally generated terrain map.
 						</p>	
 					</section>
 
 					<section>
-						<h5>Step 1:</h5>
+						<h5>Water Distribution</h5>
 						<p>
-							test
+							Water is distributed across the terrain via a random distribution, and the speed and direction of the water flows are calculated via approximations of the gradient. 
 						</p>							
 					</section>
 					<section>
-						<h5>Step 2:</h5>
+						<h5>Sediment Collection</h5>
 						<p>
-							test
+							Each point has a sediment capacity, the amount of dirt/rock that the water can pick up from that point. This depends on the velocity of the water, amount of water, as well as the slope of the terrain at the point.
 						</p>							
 					</section>
 					<section>
-						<h5>Step 3:</h5>
+						<h5>Erosion and Deposition</h5>
 						<p>
-							test
+							Depending on the sediment capacity, the water either picks up some sediment or deposits some sediment, changing the terrain. The water then moves downhill, and the process repeats. Some water is also evaporated away each time.
 						</p>							
 					</section>
 					<section>
-						<h5>Step 4:</h5>
+						<h5>Effect</h5>
 						<p>
-							test
+							Terrain forms channels and ridges, as well as plateaus and hollows. Terrain is far more realistic looking than "lumpy" Perlin noise terrain.
 						</p>							
 					</section>
 
@@ -141,14 +141,14 @@
 				<section data-background-iframe="https://hershkumar.github.io/terrain/hydraulic1.html"  data-transition="fade">
 					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; position: relative;right:10%;top:0;width: 35%;">
 						<h5>After Hydraulic Erosion</h5>
-						<p>This is procedurally generated terrain that has been hydraulically eroded for ______ iterations.</p>
+						<p>This is procedurally generated terrain that has been hydraulically eroded for 563 iterations.</p>
 					</div>
 				</section>
 				
 				<section>
 					<section>
 						<h5>Hydraulic Erosion animations</h5>
-						<p>These animations depict 200 iterations of hydraulic erosion on terrain.</p>
+						<p>These animations depict 563 iterations of hydraulic erosion on terrain.</p>
 					</section>
 					<section><img src="imgs/grayhydraulic.gif" /></section>
 					<section><img src="imgs/colorhydraulic.gif" /></section>
